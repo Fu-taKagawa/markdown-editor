@@ -5,7 +5,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx$/,
+                test: /\.json|\.js|\.ts|\.tsx$/,　// 変更箇所
                 use: 'ts-loader',
                 exclude: /node_modules/,
             },
@@ -26,7 +26,7 @@ module.exports = {
             directory: path.join(__dirname, 'dist'),
         },
         client: {
-            overlay: false, // デフォルトでブラウザに警告出るみたいなので消しておきました。
+            overlay: false,
         },
     }
 }
