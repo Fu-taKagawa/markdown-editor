@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
+
 const HeaderWrapper = styled.header`
   align-content: center;
   display: flex;
@@ -26,17 +27,17 @@ const HeaderControl = styled.div`
 `
 
 interface Props {
-    title: string
-    children: React.ReactNode
+  title: string
+  children: React.ReactNode
 }
 
 export const Header: React.FC<Props> = (props) => (
-    <HeaderWrapper>
-        <HeaderTitle>
-            {props.title}
-        </HeaderTitle>
-        <HeaderControl>
-            {props.children}
-        </HeaderControl>
-    </HeaderWrapper>
+  <HeaderWrapper>
+    <HeaderTitle>
+      {props.title}
+    </HeaderTitle>
+    <HeaderControl>
+      {props.children}
+    </HeaderControl>
+  </HeaderWrapper>
 )
