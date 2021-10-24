@@ -7,7 +7,10 @@ import { Button } from '../components/button'
 import { SaveModal } from '../components/save_modal'
 import { Link } from 'react-router-dom'
 import { Header } from '../components/header'
-const StorageKey = 'pages/editor:text'
+interface Props {
+  text: string
+  setText: (text: string) => void
+}
 const { useState } = React
 
 
@@ -49,8 +52,8 @@ const Preview = styled.div`
   width: 48vw;
 `
 
-export const Editor: React.FC = () => {
-  const [text, setText] = useStateWithStorage('', StorageKey)
+export const Editor: React.FC<Props> = (props) => {
+  const { text, setText } = props
 
   const [showModal, setShowModal] = useState(false)
 
